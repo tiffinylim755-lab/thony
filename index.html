@@ -120,4 +120,201 @@
             border-radius: 8px;
             padding: 30px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            border: 1px solid var
+            border: 1px solid var(--border-color);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-group {
+            margin-bottom: 15px;
+        }
+
+        .info-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .info-value {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .info-value.highlight {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        /* Seção de Correspondência */
+        .full-width-card {
+            grid-column: 1 / -1;
+            background: linear-gradient(to right, #ffffff, var(--bg-light));
+        }
+
+        .address-box {
+            background-color: white;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            margin-top: 15px;
+            font-family: monospace;
+            font-size: 1rem;
+            color: #333;
+            border-radius: 0 4px 4px 0;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.02);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            background-color: white;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .company-name {
+                font-size: 1.8rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-link {
+                margin: 5px 0;
+            }
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1 class="company-name">Thony Ferragem LTDA</h1>
+            <div class="cnpj-badge">CNPJ: 87.093.290/0001-43</div>
+            <div>
+                <span class="status-banner">Em Recuperação Judicial</span>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#registro" class="nav-link">Informações de Registro</a>
+            <a href="#localizacao" class="nav-link">Localização</a>
+            <a href="#correspondencia" class="nav-link">Correspondência</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="grid-container">
+            
+            <section id="registro" class="card">
+                <h2 class="card-title">Informações de Registro</h2>
+                
+                <div class="info-group">
+                    <div class="info-label">Razão Social</div>
+                    <div class="info-value">Thony Ferragem LTDA em Recuperacao Judicial</div>
+                </div>
+
+                <div class="info-group">
+                    <div class="info-label">Data da Abertura</div>
+                    <div class="info-value">13/07/1972 <span style="font-size: 0.9rem; color: var(--text-muted);">(53 anos, 11 meses e 28 dias)</span></div>
+                </div>
+
+                <div class="info-group">
+                    <div class="info-label">Capital Social</div>
+                    <div class="info-value highlight">R$ 2.300.000,00</div>
+                </div>
+
+                <div class="info-group">
+                    <div class="info-label">Natureza Jurídica</div>
+                    <div class="info-value">Sociedade Empresária Limitada</div>
+                </div>
+
+                <div class="info-group">
+                    <div class="info-label">Porte / Tipo</div>
+                    <div class="info-value">Sem Enquadramento / Matriz</div>
+                </div>
+
+                <div class="info-group">
+                    <div class="info-label">Opção pelo Simples / MEI</div>
+                    <div class="info-value">Não / Não</div>
+                </div>
+
+                <div class="info-group">
+                    <div class="info-label">Situação Cadastral</div>
+                    <div class="info-value">Ativa <span style="font-size: 0.9rem; color: var(--text-muted);">(desde 15/01/2005)</span></div>
+                </div>
+
+                <div class="info-group">
+                    <div class="info-label">Situação Especial</div>
+                    <div class="info-value" style="color: var(--accent-color); font-weight: 600;">Recuperação Judicial <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">(desde 23/02/2026)</span></div>
+                </div>
+            </section>
+
+            <section id="localizacao" class="card">
+                <h2 class="card-title">Localização</h2>
+
+                <div class="info-group">
+                    <div class="info-label">Logradouro</div>
+                    <div class="info-value">Avenida Lucas de Oliveira, 1780</div>
+                </div>
+
+                <div class="info-group">
+                    <div class="info-label">Complemento</div>
+                    <div class="info-value">Loja</div>
+                </div>
+
+                <div class="info-group">
+                    <div class="info-label">Bairro</div>
+                    <div class="info-value">Bela Vista</div>
+                </div>
+
+                <div class="info-group">
+                    <div class="info-label">Município / Estado</div>
+                    <div class="info-value">Porto Alegre - RS</div>
+                </div>
+
+                <div class="info-group">
+                    <div class="info-label">CEP</div>
+                    <div class="info-value">90460-000</div>
+                </div>
+            </section>
+
+            <section id="correspondencia" class="card full-width-card">
+                <h2 class="card-title">Para Correspondência</h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 10px;">Utilize a formatação abaixo para o envio de documentos oficiais e correspondências:</p>
+                <div class="address-box">
+                    Thony Ferragem LTDA em Recuperacao Judicial<br>
+                    Avenida Lucas de Oliveira 1780 Loja<br>
+                    Bela Vista<br>
+                    Porto Alegre RS<br>
+                    90460-000
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Thony Ferragem LTDA. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
